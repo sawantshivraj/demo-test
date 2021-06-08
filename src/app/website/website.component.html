@@ -1,0 +1,145 @@
+<div class="parant_div" fxFlex="100" fxLayout="row wrap">
+  <div class="ProfileBar" fxFlex="100">
+    <div class="titalHed" fxLayout="row" >
+      <div class="colletction" fxLayout="column" >
+        <span class="TitleCOntent"> Turn your videos &</span>
+        <span class="TitleCOntent"> pictures into a movie</span>
+        <span class="TitleCOntent"> with just one click</span>
+      </div>
+    </div>
+  </div>
+
+ 
+  
+
+  <div class="contentbar" fxFlex="100">
+    <span class="amazing"> Tell the amazing story </span>
+    <p class="title_cont_story">
+      Editing software that brings your videos and pictures together in one
+      movie
+    </p>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="container" fxFlex="100" >
+    <div class="card" (click)="flip($event)" fxFlex="100">
+      <div class="ItomBar flip-vertical-right" fxFlex="100" fxLayout="row" fxLayout.xs="column" >
+        <div class="imgBox" fxFlex="38">
+          <img src="../../assets/Assets/computer1.jpg" class="imgr" fxFlex="100" alt="" />
+        </div>
+        <div
+          class="contBox"
+          fxFlex="62"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          style="background-color: white;"
+        >
+          <div class="cutomDiv">
+            <p class="custmize">Customize your Moments</p>
+            <p class="para">
+              While working on web page we often have <br />
+              such scenarios where we have to control <br />
+              user input or typing. there we<br />
+              
+            </p>
+            <div class="fif" (click)="flip($event)">flif</div>
+          </div>
+        </div>
+      </div>
+      <div class="back">
+        <div class="ItomBar flip-vertical-right" fxFlex="100" fxLayout="row" fxLayout.xs="column">
+          <div class="imgBox" fxFlex="38">
+            <img src="../../assets/Assets/computer1.jpg" class="imgr" fxFlex="100" alt="" />
+          </div>
+          <div
+            class="contBoxBack"
+            fxFlex="62"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+            style="background-color: white;"
+          >
+            <div style="width: 70%; margin-top: 20%;background-color: white;">
+              <p class="custmize">Customize your Moments</p>
+              <p class="para">
+                While working on web page we often have <br />
+              such scenarios where we have to control <br />
+              user input or typing. there we get debounceTime()<br />
+              on the track. 
+        
+              </p>
+              <div class="fif" (click)="flip($event)">flif</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="ItomBar2" fxFlex="100" fxLayout="row" fxLayout.xs="column" >
+    <div class="contBox2" fxFlex="62" fxLayout="row" fxLayoutAlign="end center"   fxLayoutAlign.lt.md="center center"   fxLayoutAlign.xs="center center" >
+      <div class="automic" fxFlex.xs="55" >
+        <p class="custmize2">Automic Crop & Zoom your Moments</p>
+        <p class="para2">
+          While working on web page we often have 
+          such scenarios where we have to control <br />
+          user input or typing. there we get debounceTime()<br />
+          on the track. with the help of debounceTime()<br />
+          we can create delay for
+        </p>
+        <div class="fif2" (click)="clicko(3)" *ngIf="act == 3">Change</div>
+        <div class="fif2" (click)="clicko(4)" *ngIf="act == 4">Change</div>
+      </div>
+    </div>
+<div class="just"></div>
+    <div class="imgBox marg" fxFlex="100" >
+        <img fxFlex.xs="100" class="imago"
+          src="../../assets/Assets/computer2.jpg"
+          *ngIf="act == 3"
+          fxFlex="100"
+          alt=""
+        />
+        <img
+        class="imago"
+          src="../../assets/Assets/computer2b.jpg"
+          *ngIf="act == 4"
+          fxFlex="100"
+          alt=""
+        />
+      </div>
+
+  
+  </div>
+
+  <div
+    class="lastimgBox"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+  >
+
+  <div class="blackDiv" fxLayout="column" fxFlex="70" fxLayoutAlign="center center" fxLayoutGap="20px">
+      <p class="trasfterText">Free trial.No credit card.No Hassel</p>
+<p class="trasfterTextsmall">just enter your email address below and begin capturing moments</p>
+
+<div style="height:80px"  fxLayout="row"  fxLayoutAlign="center center">
+    <input type="text" placeholder="Enter Your Email" class="inputB"> <button class="butOL" >START FREE TRIAL</button>
+</div>
+
+    </div>
+
+
+
+
+  </div>
+
+  <div fxFlex="100" class="footer" fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+      Sitemap | Legal |Blog 
+  </div> 
+</div>
