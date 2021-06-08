@@ -1,0 +1,116 @@
+<div
+  class="main_div_of_form"
+  fxFlex="100"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+>
+  <div
+    class="form_div"
+    fxLayout="column"
+    fxFlex="100"
+    fxLayoutAlign="center center"
+    style="height: 90vh"
+  >
+    <div fxlayout="row" class="form_top" >
+      <p class="Upper">
+        PIXL<span class="blueCol">HIVE</span>
+      </p>
+    </div>
+
+    <div fxlayout="row" fxFLex="80">
+      <form
+        action=""
+        class="form_div_inner"
+        [formGroup]="profileForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="titleOfForm">
+          <p class="letsText">
+            <span class="brow">let's</span>
+            <span class="fent"> setup</span>
+          </p>
+          <p class="letsText">
+            <span class="fent">your</span>
+            <span class="blueCol"> account</span>
+          </p>
+        </div>
+
+        <mat-form-field id="test" appearance="outline" class="width_of_input">
+          <mat-label class="test2">Sing Up with Email</mat-label>
+          <input
+            matInput
+            placeholder="Sing Up with Email"
+            formControlName="Email"
+          />
+          <mat-icon
+            matSuffix
+            [ngClass]="{
+              iconcolor:
+                profileForm.get('Email')?.invalid &&
+                profileForm.get('Email')?.touched
+                , 
+              isvalid: profileForm.get('Email')?.valid
+            }"
+            >check_circle</mat-icon
+          >
+        </mat-form-field>
+
+        <mat-form-field id="test" appearance="outline" class="width_of_input">
+          <mat-label class="test2">Username</mat-label>
+          <input matInput placeholder="Username" formControlName="Username" />
+          <mat-icon matSuffix
+          [ngClass]="{
+            iconcolor:
+              profileForm.get('Username')?.invalid &&
+              profileForm.get('Username')?.touched, 
+              isvalid: profileForm.get('Username')?.valid
+          }"
+          >report</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field id="test" appearance="outline" class="width_of_input">
+          <mat-label class="test2">Password</mat-label>
+          <input matInput placeholder="Password" formControlName="Password"
+          [(ngModel)]="password"/>
+          <mat-icon matSuffix
+          [ngClass]="{
+            iconcolor:
+              profileForm.get('Password')?.invalid &&
+              profileForm.get('Password')?.touched, 
+              isvalid: profileForm.get('Password')?.valid
+          }"
+          >visibility</mat-icon>
+        </mat-form-field>
+        <div
+          style="position: relative; bottom: 10px"
+          fxLayout="row"
+          fxLayoutAlign="start center"
+          fxLayoutGap="1vh"
+        >
+
+          <password-strength-meter
+            style="width: 100%"
+            [password]="password"
+            [enableFeedback]="true"
+          
+          ></password-strength-meter>
+        </div>
+
+        <div
+          class="width_of_input"
+          fxLayout="column"
+          fxLayout="column"
+          fxLayoutAlign="start stretch"
+        >
+          <button mat-raised-button fxFlex class="input_button" fxFlex="6.7vh" [disabled]="profileForm.invalid" >
+            Sign up
+          </button>
+          <span class="Already"
+            >Already have an account? sign in
+            </span
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
